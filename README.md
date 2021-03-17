@@ -1,6 +1,6 @@
 # Sorting
-[![](https://github.com/mikeizbicki/sorting/workflows/tests/badge.svg)](https://github.com/mikeizbicki/sorting/actions?query=workflow%3Atests)
-[![](https://github.com/mikeizbicki/sorting/workflows/extra_credit/badge.svg)](https://github.com/mikeizbicki/sorting/actions?query=workflow%3Atests)
+[![](https://github.com/vbopardi/sorting/workflows/tests/badge.svg)](https://github.com/vbopardi/sorting/actions?query=workflow%3Atests)
+[![](https://github.com/vbopardi/sorting/workflows/extra_credit/badge.svg)](https://github.com/vbopardi/sorting/actions?query=workflow%3Atests)
 
 You will implement the merge and quick sort algorithms.
 
@@ -26,7 +26,7 @@ If you take CS148 (graph algorithms), you will explore many more variations of t
 
 Complete the following tasks:
 
-1. Fork the [sorting repo](https://github.com/mikeizbicki/sorting) and enable github actions
+1. Fork the [sorting repo](https://github.com/vbopardi/sorting) and enable github actions
 1. Update the `README.md` file so that the test case badges point to your repo.
 1. Implement the `_merged`, `merge_sorted`, and `quick_sorted` functions so that all test cases in `tests/test_main.py` pass.
    You must implement `merge_sorted` and `quick_sorted` recursively.
