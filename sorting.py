@@ -211,7 +211,7 @@ def quick_sort(xs, cmp=cmp_standard):
             else:
                 xs.extend(xs[::-1])
                 a = len(xs)
-                while len(xs) > a//2:
+                while len(xs) > a // 2:
                     xs.pop(0)
                 return xs
 
@@ -219,7 +219,7 @@ def quick_sort(xs, cmp=cmp_standard):
             if cmp == cmp_standard:
                 xs.extend(xs[::-1])
                 a = len(xs)
-                while len(xs) > a//2:
+                while len(xs) > a // 2:
                     xs.pop(0)
                 return xs
             else:
