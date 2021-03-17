@@ -194,11 +194,55 @@ def _helper(xs, lo, hi, cmp):
 
 
 def quick_sort(xs, cmp=cmp_standard):
+
+    def all_same(items):
+        return all(x == items[0] for x in items)
+
+    if all_same(xs):
+        return xs
+
+    if len(xs) <= 1:
+        return xs
+
+    if len(xs) == 2:
+        if xs[0] < xs[1]:
+            if cmp == cmp_standard:
+                return xs
+            else:
+                xs.extend(xs[::-1])
+                a = len(xs)
+                while len(xs) > a//2:
+                    xs.pop(0)
+                return xs
+
+        else:
+            if cmp == cmp_standard:
+                xs.extend(xs[::-1])
+                a = len(xs)
+                while len(xs) > a//2:
+                    xs.pop(0)
+                return xs
+            else:
+                return xs
+
     lo = 0
     hi = len(xs) - 1
     if cmp == cmp_standard:
-        xs = _helper(xs, lo, hi, cmp)
-        return xs
+        a = _helper(xs, lo, hi, cmp)
+        xs.extend(a)
+        mid = len(a) // 2
+        a = a[mid:]
+        while len(xs) > len(a):
+            xs.pop(0)
+        return a
     else:
-        xs = _helper(xs, lo, hi, cmp)[::-1]
-        return xs
+        a = _helper(xs, lo, hi, cmp)[::-1]
+        xs.extend(a)
+        print(xs)
+        print(a)
+        if len(xs) == len(a):
+            mid = len(a) // 2
+            a = a[mid:]
+        while len(xs) > len(a):
+            xs.pop(0)
+        return a
